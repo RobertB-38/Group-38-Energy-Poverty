@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large raw data files (raw datasets only)
+datasets/*.zip
+datasets/*.tsv
+datasets/*.csv
+datasets/*.geojson
+
+# OS
+.DS_Store
+Thumbs.db
