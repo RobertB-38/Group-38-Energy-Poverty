@@ -36,30 +36,6 @@ Outputs are intended to support SEAI's National Retrofitting Scheme for geograph
 
 ---
 
-## Repository Structure
-
-```
-├── notebooks/
-│   ├── Energy Poverty Pipeline 1.ipynb   # EDA: BER distribution, urban/rural split, coverage
-│   └── Energy Poverty Pipeline 2.ipynb   # Full ML pipeline: feature engineering, modelling, evaluation
-│
-├── outputs/
-│   ├── eda_01_ber_distribution.png        # BER rating distribution across Small Areas
-│   ├── eda_02_urban_rural.png             # Urban vs rural breakdown
-│   ├── eda_03_ber_coverage.png            # BER coverage by Small Area
-│   ├── feature_importance_final_rf.png    # Random Forest feature importances
-│   ├── confusion_matrix_final.png         # Final model confusion matrix
-│   ├── map_energy_poverty_risk.png        # Choropleth: predicted High Risk Small Areas
-│   └── energy_poverty_spatial_dataset.geojson  # Merged spatial dataset (all features + predictions)
-│
-├── datasets/
-│   └── README.md                          # Dataset sources and download instructions
-│
-└── report/
-    └── (IEEE paper — to be added)
-```
-
----
 
 ## Pipeline Summary
 
