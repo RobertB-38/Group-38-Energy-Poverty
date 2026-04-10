@@ -10,9 +10,21 @@
 
 This project builds a machine learning pipeline to classify **energy poverty risk** across Ireland's ~18,916 Small Areas (Census 2022). The final model is a **Random Forest binary classifier** (High Risk / Not At Risk) achieving:
 
-- **Test Accuracy:** 84.96%
-- **CV Accuracy:** 84.82% ± 0.22%
-- **F1-Score:** 0.85 (symmetric across both classes)
+| Metric | Score |
+|---|---|
+| Train Accuracy | 86.13% |
+| Test Accuracy | 77.40% |
+| CV Accuracy | 77.58% ± 0.55% |
+| Balanced Accuracy | 75.31% |
+| AUC-ROC | 0.8393 |
+| Overfitting Gap | 8.73% |
+
+**Per-class performance (test set, n=3,784):**
+
+| Class | Precision | Recall | F1 |
+|---|---|---|---|
+| High Risk | 0.48 | 0.72 | 0.57 |
+| Not At Risk | 0.91 | 0.79 | 0.85 |
 
 Outputs are intended to support SEAI's National Retrofitting Scheme for geographic targeting.
 
@@ -55,8 +67,8 @@ Outputs are intended to support SEAI's National Retrofitting Scheme for geograph
 | Spatial lag | Queen contiguity (Moran's I = 0.3031, p=0.001) via libpysal + esda |
 | Target variable | Binary: BER D-or-below AND compound socioeconomic condition |
 | Class imbalance | `class_weight='balanced'` (SMOTE rejected — synthetic SAs are policy-meaningless) |
-| Hyperparameter tuning | Optuna (100 trials, TPE sampler); `max_depth` 19→10 to reduce overfitting gap to 5.06% |
-| Final model | Random Forest, 84.96% test accuracy |
+| Hyperparameter tuning | Optuna (100 trials, TPE sampler); `max_depth` set to 12 for optimal bias-variance tradeoff |
+| Final model | Random Forest, 77.40% test accuracy, AUC-ROC 0.8393 |
 
 ---
 
