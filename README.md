@@ -1,4 +1,4 @@
-# Group 38 — Energy Poverty Risk Classification in Ireland
+# Group 39 — Energy Poverty Risk Classification in Ireland
 
 **Module:** CSC1144 Data Analytics & Data Mining — DCU MSc Computing (Data Analytics), 2025–26  
 
